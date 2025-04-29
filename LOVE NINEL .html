@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Love You by JIMMY SOTO</title>
+    <link rel="icon" type="image/x-icon" href="Love_files/icon.png">
+    <meta name="language" content="es-ES">
+    <meta name="title" content="title">
+    <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
+    <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="error">
+            Tu navegador que estás usando no es compatible con el contenido que se va a mostrar. 
+            Por favor, usa Google (<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>) 
+            o Firefox (<a href="http://firefox.com.cn/download/">Firefox</a>)~
+        </div>
+
+        <div id="wrap">
+            <div id="text">
+                <div id="code">
+                    <span class="say">Para NINEL DE JIMMY:</span><br><br>
+                    <span class="say">SABES PENSÉ EN HACERTE ALGO LINDO.</span><br>
+                    <span class="say">HOY, MAÑANA Y SIEMPRE SERÁS EL AMOR DE MI VIDA.</span><br>
+                    <span class="say"> EL OJO NO OLVIDA LO QUE EL CORAZÓN HA VISTO.</span><br>
+                    <span class="say"> TE AMO Y TE SEGUIRÉ AMANDO, MI MIQUILLA.</span><br>
+                    <span class="say"><span class="space"></span> — ¡TE AMO MI AMOR BONITO!</span>
+                </div>
+            </div>
+            <div id="clock-box">
+                <a href="https://alexxdev.vercel.app/" target="_blank">Mi amor</a>
+                <a href="https://alexxdev.vercel.app/" target="_blank">por ti</a> comenzó hace...
+                <div id="clock"></div>
+            </div>
+
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+    </div>
+
+    <audio preload="auto" autoplay id="media" src="Love_files/love.mp3" loop="loop"></audio>
+    <script src="script.js"></script>
+
+    <!-- Script del reloj personalizado -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const startDate = new Date('2022-10-23T00:00:00');
+
+        function updateClock() {
+          const now = new Date();
+
+          let years = now.getFullYear() - startDate.getFullYear();
+          let months = now.getMonth() - startDate.getMonth();
+          let days = now.getDate() - startDate.getDate();
+          let hours = now.getHours() - startDate.getHours();
+          let minutes = now.getMinutes() - startDate.getMinutes();
+          let seconds = now.getSeconds() - startDate.getSeconds();
+
+          if (seconds < 0) {
+            seconds += 60;
+            minutes--;
+          }
+          if (minutes < 0) {
+            minutes += 60;
+            hours--;
+          }
+          if (hours < 0) {
+            hours += 24;
+            days--;
+          }
+          if (days < 0) {
+            months--;
+            const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+            days += previousMonth.getDate();
+          }
+          if (months < 0) {
+            months += 12;
+            years--;
+          }
+
+          document.getElementById('clock').innerHTML = 
+            `${years} años, ${months} meses, ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+      });
+    </script>
+
+</body>
+
+<!-- 
+
+Contáctame:
+
+0997907765
+
+-->
+
+</html>
